@@ -87,7 +87,7 @@ app.get('*', (req, res) => {
 });
 
 // const PORT = process.env.PORT;
-const PORT = 5000;
+const PORT = 4000;
 app.listen(PORT, () => {
-  console.log('Server listening on port 5000');
+  console.log('Server listening on port 4000');
 });
