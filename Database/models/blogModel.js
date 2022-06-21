@@ -21,7 +21,7 @@ var blogSchema = mongoose.Schema({
     username: String,
     id: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'users',
+      ref: 'User',
     },
     email: String,
   },
@@ -41,7 +41,7 @@ var blogSchema = mongoose.Schema({
   comments: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'comments',
+      ref: 'Comment',
     },
   ],
 });
@@ -56,4 +56,4 @@ blogSchema.pre('validate', function (next) {
   next();
 });
 
-module.exports = mongoose.model('blogs', blogSchema);
+module.exports = mongoose.model('Blog', blogSchema);

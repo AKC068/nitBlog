@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
   blog: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'blogs',
+      ref: 'Blog',
     },
   ],
   date: {
@@ -32,5 +32,5 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-const User = mongoose.model('users', userSchema);
+const User = mongoose.model('User', userSchema);
 module.exports = User;
