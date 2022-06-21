@@ -5,10 +5,10 @@ const commentSchema = mongoose.Schema({
   author: {
     id: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
+      ref: 'users',
     },
     username: String,
   },
 });
 
-module.exports = mongoose.model('Comment', commentSchema);
+module.exports = mongoose.model('comments', commentSchema);

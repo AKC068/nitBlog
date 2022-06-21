@@ -86,7 +86,7 @@ app.get('*', (req, res) => {
   res.render('404', { title: 'Page Not Found' });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
-  console.log('Server listening on port 3000');
+  console.log('Server listening on port 8000');
 });
