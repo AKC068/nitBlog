@@ -4,8 +4,7 @@ dotenv.config();
 
 const connectToDatabase = () => {
   try {
-    mongoose.connect(
-      process.env.DB_URI,
+    mongoose.connect('mongodb+srv://blogadmin:apnablog@cluster0.jb1ub.mongodb.net/blogdb?retryWrites=true&w=majority',
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,

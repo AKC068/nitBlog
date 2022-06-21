@@ -84,10 +84,10 @@ app.use('/users', checkAllRoutes, require('./routes/users'));
 //404 page
 app.get('*', (req, res) => {
   res.render('404', { title: 'Page Not Found' });
-  res.end();
 });
 
-const PORT = process.env.PORT;
+// const PORT = process.env.PORT;
+const PORT = 5000;
 app.listen(PORT, () => {
-  console.log('Server listening on port 8000');
+  console.log('Server listening on port 5000');
 });
