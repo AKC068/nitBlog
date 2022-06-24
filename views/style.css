@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+/* #login {
+    align-items: center;
+} */
+
+#login .forthis {
+    /* box-shadow: 4px 4px 20px 0px rgba(0,0,0,0.2); */
+    padding: 30px 20px;
+    z-index: 1000;
+}
+
+#login .forthis.container{
+    max-width:450px;
+}
+
+@media only screen and (max-width: 768px){ 
+    #login .forthis.container{
+        max-width: 400px;
+    }
+}
+@media only screen and (max-width: 576px){
+    #login .forthis.container{
+        max-width: 70%;
+    }
+}
+
+#login .form-row .form-group {
+    height: 40px;
+    width: 100%;
+    position: relative;
+    margin-top: 2rem;
+}
+
+#login .form-row .form-group input, 
+#login .form-row .form-group textarea{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 0.90em;
+    border-bottom: 1.5px solid rgba(50, 50, 50, 0.5);
+    border-radius: 0px;
+    color: #000;
+    outline: none;
+}
+
+#login .form-row .form-group textarea {
+    height: 100px;
+}
+#login .size {
+    height: 100px;
+}
+
+#login .form-group input:focus ~ label,
+#login .form-group input:valid ~ label,
+#login .form-group textarea:focus ~ label,
+#login .form-group textarea:valid ~ label{
+    transform: translateY(-25px);
+    font-size: 0.6em;
+    color: #000; 
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0 .375rem;
+}
+
+#login .form-row .form-group>label{
+    position: absolute;
+    bottom: 10px;
+    left:0;
+    color: rgba(50, 50, 50, 0.7);
+    pointer-events: none;
+    transition: all 0.4s ease;
+    margin-bottom: 0px;
+    padding: 0 .375rem;
+    font-size: 0.90em;
+}
+
+#login .form-row>.column{
+    padding: 0;
+}
+#login .form-group .form-control{
+    padding: .375rem .375rem;
+    background-color: #fff;
+}
+#login .form-group .form-control:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+#login .form-row .form-group .gap {top: 98.5px}
+
+#login .form-row .form-group .underline {
+    position: absolute;
+    bottom: 0px;
+    height: 1.5px;
+    width: 100%;
+}
+
+/* @media only screen and (min-width: 768px){
+    #login .form-row .form-group .extra {
+        width: 97.5%; 
+    }
+} */
+
+#login .form-group .underline::before {
+    position: absolute;
+    content: "";
+    height: 1.5px;
+    width: 100%;
+    background: #000;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.4s ease;
+}
+
+#login .form-group input:focus ~ .underline::before,
+#login .form-group input:valid ~ .underline::before,
+#login .form-group textarea:focus ~ .underline::before,
+#login .form-group textarea:valid ~ .underline::before  {
+    transform: scaleX(1);
+    border-bottom: none;
+}
+
+#login .btn-sm {
+    padding-top: 2.5rem;
+}
+
+#login .sm-button {
+    padding: 0.4rem 1.4rem;
+    text-transform:uppercase;
+    cursor: pointer;
+    /* background-color: #000; */
+    color: #000;
+    border: 1.5px solid #000;
+    /* font-weight: 400; */
+    font-size: 0.85em;
+    z-index: 100;
+    transition: all 0.35s ease;
+    outline: none;
+    border-radius: 0.25rem;
+}
+#login .sm-button:hover {
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 0 10px #404040a1,
+                0 0 20px #404040a1;
+    transition: all 0.35s ease;
+}
