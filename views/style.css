@@ -1,25 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 body {
-    background-color: rgb(255, 255, 255);
+    background: url('https://www.pixelstalk.net/wp-content/uploads/2016/08/Funky-HD-Wallpaper.jpg') fixed;
+    /* background-color: rgb(255, 255, 255); */
+    background-size: cover;
     font-family: 'Poppins', sans-serif;
     color: #000;
-    font-size: 14px;
+    font-size: 0.85em;
     margin: 0;
     padding: 0;
 }
 
-/* #login {
-    align-items: center;
-} */
-
-#login .forthis {
-    /* box-shadow: 4px 4px 20px 0px rgba(0,0,0,0.2); */
-    padding: 30px 20px;
-    z-index: 1000;
+#login .title {
+    font-size: 2em;
+    text-transform: uppercase;
+    color: rgb(124, 62, 102);
+    padding-bottom: 15px;
 }
 
 #login .forthis.container{
     max-width:450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 4px 4px 20px 0px rgba(0,0,0,0.2);
+    border-radius: 0.5em;
+    padding: 2.5em;
+    z-index: 1000;
+    background-color:#fff;
 }
 
 @media only screen and (max-width: 768px){ 
@@ -40,35 +48,26 @@ body {
     margin-top: 2rem;
 }
 
-#login .form-row .form-group input, 
-#login .form-row .form-group textarea{
+#login .form-row .form-group input {
     height: 100%;
     width: 100%;
     border: none;
-    font-size: 0.90em;
-    border-bottom: 1.5px solid rgba(50, 50, 50, 0.5);
-    border-radius: 0px;
+    font-size: 0.85em;
+    /* border-bottom: 1.5px solid rgba(50, 50, 50, 0.5); */
+    border-radius: 0.25rem;
     color: #000;
     outline: none;
 }
 
-#login .form-row .form-group textarea {
-    height: 100px;
-}
-#login .size {
-    height: 100px;
-}
-
 #login .form-group input:focus ~ label,
-#login .form-group input:valid ~ label,
-#login .form-group textarea:focus ~ label,
-#login .form-group textarea:valid ~ label{
-    transform: translateY(-25px);
+#login .form-group input:valid ~ label {
+    transform: translateY(-30px);
     font-size: 0.6em;
-    color: #000; 
+    color: rgb(124, 62, 102); 
     text-transform: uppercase;
     font-weight: 500;
-    padding: 0 .375rem;
+    padding: 0 .375rem 1.5px;
+    transition: all 0.35s ease;
 }
 
 #login .form-row .form-group>label{
@@ -77,40 +76,35 @@ body {
     left:0;
     color: rgba(50, 50, 50, 0.7);
     pointer-events: none;
-    transition: all 0.4s ease;
+    transition: all 0.35s ease;
     margin-bottom: 0px;
     padding: 0 .375rem;
     font-size: 0.90em;
 }
 
-#login .form-row>.column{
-    padding: 0;
-}
 #login .form-group .form-control{
     padding: .375rem .375rem;
-    background-color: #fff;
-}
-#login .form-group .form-control:focus {
-    box-shadow: none;
+    background-color: rgb(235, 235, 235);
     outline: none;
 }
+#login .form-group .form-control:focus,
+#login .form-group .form-control:valid {
+    box-shadow: none;
+    outline: 1.5px solid rgb(124, 62, 102);
+}
 
-#login .form-row .form-group .gap {top: 98.5px}
-
-#login .form-row .form-group .underline {
+/* #login .form-row .form-group .underline.container {
     position: absolute;
     bottom: 0px;
     height: 1.5px;
     width: 100%;
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+    border-radius: 0.25rem;
 }
 
-/* @media only screen and (min-width: 768px){
-    #login .form-row .form-group .extra {
-        width: 97.5%; 
-    }
-} */
-
-#login .form-group .underline::before {
+#login .form-group .underline.container::before {
     position: absolute;
     content: "";
     height: 1.5px;
@@ -118,39 +112,51 @@ body {
     background: #000;
     transform: scaleX(0);
     transform-origin: center;
-    transition: transform 0.4s ease;
+    transition: transform 0.35s ease;
+    border-bottom: none;
+    border-radius: 0.25rem;
 }
 
-#login .form-group input:focus ~ .underline::before,
-#login .form-group input:valid ~ .underline::before,
-#login .form-group textarea:focus ~ .underline::before,
-#login .form-group textarea:valid ~ .underline::before  {
+#login .form-group input:focus ~ .underline.container::before,
+#login .form-group input:valid ~ .underline.container::before,
+#login .form-group textarea:focus ~ .underline.container::before,
+#login .form-group textarea:valid ~ .underline.container::before  {
     transform: scaleX(1);
-    border-bottom: none;
+    transition: transform 0.35s ease;
+} */
+
+#login .forget-signup {
+    font-size: 0.75rem;
+    padding-left: 0.375rem;
+    margin: 0.75rem auto;
+}
+
+#login a.link{
+    text-transform: capitalize;
+    color: rgb(124, 62, 102);
+    cursor: pointer;
 }
 
 #login .btn-sm {
-    padding-top: 2.5rem;
+    margin: 2.2rem auto 2.0rem;
 }
 
 #login .sm-button {
     padding: 0.4rem 1.4rem;
-    text-transform:uppercase;
+    text-transform:capitalize;
     cursor: pointer;
-    /* background-color: #000; */
-    color: #000;
-    border: 1.5px solid #000;
-    /* font-weight: 400; */
+    background-color: rgb(124, 62, 102);
+    color: rgb(255, 255, 255);
+    border: 1.5px solid rgb(124, 62, 102);
     font-size: 0.85em;
-    z-index: 100;
+    z-index: 0;
     transition: all 0.35s ease;
     outline: none;
     border-radius: 0.25rem;
 }
 #login .sm-button:hover {
-    background-color: #000;
-    color: #fff;
-    box-shadow: 0 0 10px #404040a1,
-                0 0 20px #404040a1;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(124, 62, 102, 0.5),
+                0 0 20px rgba(124, 62, 102, 0.5);
     transition: all 0.35s ease;
 }
