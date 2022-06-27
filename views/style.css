@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 body {
-    background: url('https://www.pixelstalk.net/wp-content/uploads/2016/08/Funky-HD-Wallpaper.jpg') fixed;
-    /* background-color: rgb(255, 255, 255); */
-    background-size: cover;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
     color: #000;
     font-size: 0.85em;
     margin: 0;
@@ -65,7 +63,7 @@ body {
     font-size: 0.6em;
     color: rgb(124, 62, 102); 
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
     padding: 0 .375rem 1.5px;
     transition: all 0.35s ease;
 }
@@ -160,3 +158,159 @@ body {
                 0 0 20px rgba(124, 62, 102, 0.5);
     transition: all 0.35s ease;
 }
+
+/* ======== HOME ======== */
+
+#home-page {
+    background-color: rgb(165, 190, 204);
+}
+#home-page>.container {
+    padding: 2em;
+    margin: auto;
+}
+
+@media (min-width: 769px) {
+    #home-page .row>* {
+        transition: width 0.35s ease;
+    }
+}
+
+@media (max-width: 768px) {
+    #home-page .row .userallinfo {
+        display:none;
+    }
+}
+@media (width: 768px) {
+    #home-page .row .userallinfo {
+        display: block;
+    }
+}
+
+
+#home-page .userinfo,
+#home-page .otherinfo {
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    border-radius: 0.25em;
+    background-color: rgb(242, 235, 233);
+    padding: 1.5rem;
+    color: rgb(124, 62, 102);
+}
+#home-page .userinfo p>span {
+    color: rgb(36, 58, 115);
+}
+
+#home-page .userinfo .avtar,
+#home-page .userinfo .username {
+    text-align: center;
+    padding: 1rem 1rem;
+    margin-bottom: 0;
+}
+#home-page .userinfo .avtar>.userpic {
+    border-radius: 50%;
+    width: 4.5rem;
+    height: 4.5rem;
+}
+#home-page .userinfo .username {
+    font-size: 0.9rem;
+    padding: 0 0.25rem;
+    text-transform: capitalize;
+    color: rgb(36, 58, 115)
+}
+#home-page .userinfo .userbranch,
+#home-page .userinfo .useryear,
+#home-page .userinfo .userfollowers,
+#home-page .userinfo .userfollowing {
+    font-size: 0.75em;
+    padding: 0 0.25rem 0.5rem;
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+#home-page .userinfo .useryear,
+#home-page .userinfo .userfollowing{
+    padding-bottom: 0;
+}
+
+#home-page hr{
+    border-top: 1px solid rgb(165, 190, 204);
+    margin: 0.9rem 0;
+    opacity: 1;
+}
+
+#home-page .otherinfo {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+#home-page .otherinfo .interest{
+    font-size: 0.8rem;
+    margin-bottom: 0; 
+    padding: 0 0.25rem;
+}
+
+
+#home-page .createpost,
+#home-page .blogpost {
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    border-radius: 0.25em;
+    background-color: rgb(242, 235, 233);
+    padding: 1.5rem;
+    color: rgb(124, 62, 102);
+    /* width: 100%; */
+}
+
+#home-page .createpost{
+    display: flex;
+    flex-direction: row;
+}
+#home-page .createpost .userimg {
+    margin: 0 1.5rem 0 0.5rem;
+    padding-top: 0.5rem;
+}
+#home-page .createpost .userimg>.userpic {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+}
+
+#home-page .createpost .create{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 0.5rem 0;
+}
+#home-page .createpost .create .textarea{
+    width: 100%;
+    border: 1px solid rgb(165, 190, 204);
+    padding: 1.5rem;
+    border-radius: 4em;
+    background-color:#fff;
+}
+
+#home-page .createpost .create .textarea:hover {
+    background-color:rgb(248, 248, 248);
+}
+
+#home-page .createpost .create .textarea>a{
+    font-size: 0.8rem;
+    color: rgb(124, 62, 102);
+    text-decoration: none;
+}
+
+#home-page .createpost .create .post{
+    padding: 1rem 0 0 1rem;
+}
+#home-page .createpost .create button{
+    border: none;
+    border-radius: 1.5em;
+    background-color: rgb(124, 62, 102);
+    color: #fff;
+    padding: 0.5rem 2.5rem;
+}
+#home-page .createpost .create button:hover{
+    background-color: rgb(142, 71, 117);
+}
+
+#home-page .blogpost {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+

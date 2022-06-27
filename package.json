@@ -1,0 +1,22 @@
+{
+  "name": "nitblog",
+  "version": "1.0.0",
+  "description": "for the students & by the students",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AKC068/nitBlog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AKC068/nitBlog/issues"
+  },
+  "homepage": "https://github.com/AKC068/nitBlog#readme",
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
+}

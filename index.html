@@ -5,42 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Login</title>
+    <title>Home</title>
 
     <link rel="stylesheet" href="./views/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
-    <div id="login">
-        <!-- <div class="col-lg-8 col-sm-7"> -->
-            <div class=" forthis container">
-              <div class="title">nit blog</div>
-              <form>
-                <div class="form-row">
-                  <div class="form-group">
-                    <input type="email" class="form-control" name="email" required>
-                    <label>Email</label>
-                    <!-- <div class="underline extra"></div> -->
-                  </div>
+    <div id="home-page">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-4 userallinfo">
+                <div class="userinfo">
+                    <p class="avtar"><img src="https://www.w3schools.com/w3images/avatar3.png" class="userpic" alt="userpic"></p>
+                    <h5 class="username">Ayush Kumar Chaudhary</h5>
+                    <hr>
+                    <p class="userbranch">branch: <span>ECE</span></p>
+                    <p class="useryear">year: <span>4th</span></p>
+                    <hr>
+                    <p class="userfollowers">followers: <span>10</span></p>
+                    <p class="userfollowing">following: <span>10</span></p>
                 </div>
-                <div class="form-row">
-                  <div class="form-group">
-                    <input type="password" class="form-control" name="password" required>
-                    <label>Password</label>
-                    <!-- <div class="underline extra"></div> -->
-                  </div>
+                <div class="otherinfo">
+                    <p class="interest">Lorem ipsum dolor</p>
+                    <hr>
+                    <p class="interest">Lorem ipsum dolor</p>
+                    <hr>
+                    <p class="interest">Lorem ipsum dolor</p>
+                    <hr>
+                    <p class="interest">Lorem ipsum dolor</p>
                 </div>
-                <div class="btn-sm d-grid gap-2 mx-auto">
-                  <button type="submit" class="sm-button">sign in</button>
-                </div>
-                <div class="forget-signup"><a class="link" href="#">forget password?</a>
-                <br>
-                Don't have an account? <a class="link" href="#">register</a></div>
-              </form>
             </div>
-          <!-- </div> -->
-    </div>
+            <div class="col-lg-9 col-md-8 blog">
+                <div class="createpost">
+                    <div class="userimg">
+                        <img src="https://www.w3schools.com/w3images/avatar3.png" class="userpic" alt="userpic">
+                    </div>
+                    <div class="create">
+                        <div class="textarea"><a href="#">Ask or share something here...</a></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+                        <div class="post"><a href="#"><button type="button" class="btn btn-sm">Post</button></a></div>
+                    </div>
+                </div>
+                <div class="blogpost">
+                    
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
 </body>
 </html>
