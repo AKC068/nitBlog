@@ -41,9 +41,29 @@
                         <img src="https://www.w3schools.com/w3images/avatar3.png" class="userpic" alt="userpic">
                     </div>
                     <div class="create">
-                        <div class="textarea"><a href="#">Ask or share something here...</a></div>
+                        <div class="textarea" data-bs-toggle="modal" data-bs-target="#textareaModal"><a>Ask or share anything here...</a></div>
 
-                        <div class="post"><a href="#"><button type="button" class="btn btn-sm">Post</button></a></div>
+                        <div class="post"><button type="button" class="btn btn-sm" data-bs-toggle="modal" data-bs-target="#textareaModal">Post</button></div>
+
+                        <div class="modal fade" id="textareaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                              <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="exampleModalLabel">Modal Heading</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    Modal body..
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-sm" data-bs-dismiss="modal">Post</button>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="blogpost">
@@ -53,5 +73,7 @@
           </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

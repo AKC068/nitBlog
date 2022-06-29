@@ -16,7 +16,8 @@
     "url": "https://github.com/AKC068/nitBlog/issues"
   },
   "homepage": "https://github.com/AKC068/nitBlog#readme",
-  "devDependencies": {
-    "prettier": "^2.7.1"
+  "dependencies": {
+    "express": "^4.18.1",
+    "node": "^18.4.0"
   }
 }
