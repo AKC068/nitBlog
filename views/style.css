@@ -257,7 +257,6 @@ body {
     background-color: rgb(242, 235, 233);
     padding: 1.5rem;
     color: rgb(124, 62, 102);
-    /* width: 100%; */
 }
 
 #home-page .createpost{
@@ -310,6 +309,31 @@ body {
 }
 #home-page .createpost .create button:hover{
     background-color: rgb(142, 71, 117);
+}
+
+#home-page .createpost .create .modal-title {
+    font-size: 0.9rem;
+}
+#home-page .createpost .create .btn-close {
+    border: 1px solid rgb(124, 62, 102);
+    border-radius: 50%;
+    padding: 0.75rem;
+    background-color: transparent;
+}
+#home-page .createpost .create .btn-close:hover,
+#home-page .createpost .create .btn-close:focus {
+    background-color: transparent;
+    opacity: 0.6;
+    box-shadow: none; 
+}
+#home-page .createpost .create .modal-body textarea {
+    font-size: 0.8rem;
+    outline: none;
+}
+#home-page .createpost .create .modal-body textarea:focus {
+    outline: 1px solid rgb(124, 62, 102);;
+    box-shadow: none; 
+    border: 1px solid #fff;
 }
 
 #home-page .blogpost {

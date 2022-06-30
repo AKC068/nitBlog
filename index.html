@@ -42,26 +42,27 @@
                     </div>
                     <div class="create">
                         <div class="textarea" data-bs-toggle="modal" data-bs-target="#textareaModal"><a>Ask or share anything here...</a></div>
-
                         <div class="post"><button type="button" class="btn btn-sm" data-bs-toggle="modal" data-bs-target="#textareaModal">Post</button></div>
 
-                        <div class="modal fade" id="textareaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="textareaModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+
                               <div class="modal-content">
-                                <!-- Modal Header -->
+                                <!-- Modal Header with close button-->
                                 <div class="modal-header">
-                                    <h4 class="modal-title" id="exampleModalLabel">Modal Heading</h4>
+                                    <h5 class="modal-title">Create a new post</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                 </div>
-                                <!-- Modal body -->
+                                <!-- Modal body with textarea-->
                                 <div class="modal-body">
-                                    Modal body..
+                                    <textarea class="form-control ask" placeholder="What's on your mind... Ask or Share" rows="10"></textarea>
                                 </div>
-                                <!-- Modal footer -->
+                                <!-- Modal footer with submit button-->
                                 <div class="modal-footer">
-                                    <button type="submit" class="btn btn-sm" data-bs-dismiss="modal">Post</button>
+                                    <button type="submit" class="btn btn-sm">Post</button>
                                 </div>
                               </div>
+
                             </div>
                         </div>
                     </div>
