@@ -1,2 +1,2 @@
 # nitBlog
-a blog, for the students and by the students
+A blog, for the students and by the students
