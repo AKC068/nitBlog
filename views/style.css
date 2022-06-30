@@ -262,6 +262,7 @@ body {
 #home-page .createpost{
     display: flex;
     flex-direction: row;
+    margin-bottom: 2em;
 }
 #home-page .createpost .userimg {
     margin: 0.7rem 1.5rem 0 0;
@@ -335,7 +336,6 @@ body {
 }
 
 #home-page .blogpost {
-    margin-top: 2em;
     margin-bottom: 1em;
 }
 
@@ -345,7 +345,7 @@ body {
     height: 3rem;
 }
 #home-page .blogpost .userdetails>.username {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color:rgb(36, 58, 115);
     margin-left: 1rem;
 }
@@ -355,15 +355,38 @@ body {
     font-size: 0.7rem;
     color:rgb(128, 175, 202);
 }
+
 #home-page .blogpost .blogbody>p{
-    font-size: 0.85em;
+    font-size: 0.8em;
     color:rgb(36, 58, 115);
     margin-bottom: 0;
 }
+#home-page .blogpost .social>span {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid rgb(124, 62, 102);
+    border-radius: 1rem;
+}
+#home-page .blogpost .social>span:hover{
+    background-color:rgba(124, 62, 102);
+    color:rgb(242, 235, 233);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
+#home-page .blogpost .comments {
+    margin-left: 0.5rem;
+}
+#home-page .blogpost .social i{
+    font-size: 1rem;
+    padding-right: 0.5rem;
+    vertical-align: middle;
+}
+
 
 @media (max-width: 767px) {
     #home-page>.container {
-        padding: 0.5em 0.25em;
+        padding: 0.5em;
     }
     #home-page .createpost,
     #home-page .blogpost {
@@ -381,8 +404,10 @@ body {
     #home-page .createpost .create .post{
         padding: 0.5rem 0 0 0.5rem;
     }
+    #home-page .createpost{
+        margin-bottom: 1em;
+    }
     #home-page .blogpost {
-        margin-top: 1em;
         margin-bottom: 0.5em;
     }
     #home-page .blogpost .userdetails>.username {
