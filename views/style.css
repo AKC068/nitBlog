@@ -264,8 +264,7 @@ body {
     flex-direction: row;
 }
 #home-page .createpost .userimg {
-    margin: 0 1.5rem 0 0.5rem;
-    padding-top: 0.5rem;
+    margin: 0.7rem 1.5rem 0 0;
 }
 #home-page .createpost .userimg>.userpic {
     border-radius: 50%;
@@ -277,7 +276,6 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 0 0.5rem 0;
 }
 #home-page .createpost .create .textarea{
     width: 100%;
@@ -341,7 +339,29 @@ body {
     margin-bottom: 1em;
 }
 
-@media (max-width: 768px) {
+#home-page .blogpost .userdetails .userpic {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+}
+#home-page .blogpost .userdetails>.username {
+    font-size: 0.8rem;
+    color:rgb(36, 58, 115);
+    margin-left: 1rem;
+}
+#home-page .blogpost .userdetails>.timestamp {
+    float: right;
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    color:rgb(128, 175, 202);
+}
+#home-page .blogpost .blogbody>p{
+    font-size: 0.85em;
+    color:rgb(36, 58, 115);
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
     #home-page>.container {
         padding: 0.5em 0.25em;
     }
@@ -350,8 +370,7 @@ body {
         padding: 0.5em;
     }
     #home-page .createpost .userimg {
-        margin: 0 0.5rem 0 0.25rem;
-        padding-top: 0.25rem;
+        margin: 0.27rem 0.5rem 0 0.25rem;
     }
     #home-page .createpost .create{
         margin: 0 0.25rem 0 0.25rem;
@@ -365,5 +384,11 @@ body {
     #home-page .blogpost {
         margin-top: 1em;
         margin-bottom: 0.5em;
+    }
+    #home-page .blogpost .userdetails>.username {
+        margin-left: 0.5rem;
+    }
+    #home-page hr {
+        margin: 0.5rem 0;
     }
 }
