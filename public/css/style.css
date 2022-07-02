@@ -169,6 +169,7 @@ body {
 #login .social-signup img {
     height: 60%;
     width: 60%;
+    cursor: pointer;
 }
 
 
