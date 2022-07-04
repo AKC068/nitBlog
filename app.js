@@ -4,21 +4,17 @@ const ejs = require("ejs");
 const mongoose = require("mongoose");
 const Signup = require("./models/signupModel.js");
 
-// const dotenv = require("dotenv");
-// dotenv.config();
+const dotenv = require("dotenv");
+dotenv.config();
 
 const app = express();
 
-// const connect = async () => {
-//   try {
-//     await mongoose.connect(process.env.MONGODB);
-//     console.log("Connected to MongoDB");
-//   } catch (error) {
-//     throw error;
-//   }
-// };
-
-mongoose.connect("mongodb://localhost:27017/nitblogDB");
+mongoose.connect(process.env.MONGODB, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("Connected to MongoDB..."))
+  .catch((err) => console.log("Error connecting MongoDB: " + err));
 
 app.set("view engine", "ejs");
 
