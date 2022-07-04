@@ -56,10 +56,6 @@ app.post("/signup", function (req, res) {
 //   res.sendFile(__dirname+"/index.html");
 // });
 
-// mongoose.connection.on("disconnected", () => {
-//     console.log("mongoDb disconnected!");
-//   });
-
 const PORT = 3000;
 app.listen(PORT, function () {
   console.log("Server started at port " + PORT);
