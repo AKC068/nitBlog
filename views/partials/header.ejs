@@ -1,34 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<title>Home</title>
-		<link rel="stylesheet" href="/css/style.css">
-		
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-</head>
-<body>
-	<div id="navbar" class="container-fluid">
-		
-		<div class="navshape">
-			<h5 class="logo">NITBlog</h5>
-			<div class="components">
-				<div class="search-container">
-					<form action="">
-						<input type="text" placeholder="Search..." name="search">
-						<button type="submit"><i class="bi bi-search"></i></button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="navbar" class="container-fluid">
+      <div class="navshape">
+        <div class="components">
+          <span role="button" class="nav-link imag">
+						<img
+              src="https://www.w3schools.com/w3images/avatar3.png"
+              class="userpic"
+              alt="userpic"
+              onclick="openNav()"/>
+					</span>
+          <ul class="navbar-nav links">
+            <li class="nav-item">
+              <a href="" class="nav-link active">
+                <i class="bi bi-house-door-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">
+                <i class="bi bi-bell-fill"></i>
+                <span>Notifications</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">
+                <i class="bi bi-headset"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <h5 class="logo">NITBlog</h5>
+
+        <div class="search-container">
+          <form action="" class="largeviewport">
+						<input id="normalinput" type="text" placeholder="Search..." name="search"/>
+						<button type="submit" id="normalsearch">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+					<form action="" class="smallviewport">
+						<input id="searchbar" type="text" placeholder="Search..." name="search"/>
+            <span role="button" id="closeinput" onclick="closeInput()"><i class="bi bi-x"></i></span> <!--close button-->
+            <button type="button" role="button" id="expandinput" onclick="expandInput()">
+              <i class="bi bi-search"></i>
+            </button>	<!--search button-->
 					</form>
-				</div>
-				<div class="links">
-					<a href="" class="nav-link"><i class="bi bi-headset"></i><span>Contact</span></a>
-					<a href="" class="nav-link"><i class="bi bi-bell-fill"></i><span>Notifications</span></a>
-					<a href="" class="nav-link active"><i class="bi bi-house-door-fill"></i><span>Home</span></a>
-				</div>
-				<a href="" class="nav-link"><img src="https://www.w3schools.com/w3images/avatar3.png" class="userpic"alt="userpic"/></a>
-			</div>
-		</div>
-	</div>
+        </div>
+      </div>
+      <div class="overlay"></div>
+      <div id="myNav">
+        <ul class="navbar-nav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+						<i class="bi bi-x"></i>
+					</a>
+          <li class="nav-item">
+            <span href="" class="nav-link imag">
+							<img src="https://www.w3schools.com/w3images/avatar3.png" class="userpic" alt="userpic"/>
+						</span>
+            <span class="nav-link name"> Ayush Kumar Chaudhary </span>
+            <a href="" class="nav-link view">
+              <button type="button" class="btn viewprofile">
+                view profile
+              </button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link active">
+              <i class="bi bi-house-door-fill"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">
+              <i class="bi bi-bell-fill"></i>
+              <span>Notifications</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">
+              <i class="bi bi-headset"></i>
+              <span>Contact</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">
+              <i class="bi bi-box-arrow-right"></i>
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="myNav-out">
+        <ul class="navbar-nav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+						<i class="bi bi-x"></i>
+					</a>
+          <li class="nav-item">
+            <span class="nav-link imag">
+							<img src="https://www.w3schools.com/w3images/avatar3.png" class="userpic" alt="userpic"/>
+						</span>
+            <span class="nav-link name"> Ayush Kumar Chaudhary </span>
+            <a href="" class="nav-link view">
+              <button type="button" class="btn viewprofile">
+                view profile
+              </button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">
+              <i class="bi bi-box-arrow-right"></i>
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
