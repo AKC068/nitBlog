@@ -8,9 +8,42 @@ body {
 	padding: 0;
 }
 
+/* ======== LANDING PAGE ======= */
+
+.landing {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.landing h1 {
+	color: rgb(142, 71, 117);
+	align-self: center;
+	text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+	text-transform: uppercase;
+	margin-bottom:0.5em;
+	font-size: 4rem;
+}
+.landing a {
+	text-decoration: none;
+}
+.landing .btn,
+.landing .btn:hover {
+	border-radius: 0.25rem;
+	border: none;
+	background-color: rgb(128, 175, 202);
+	color: rgb(242, 235, 233);
+	font-size: 1em;
+	align-self: center;
+	outline: none;
+	box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+}
 
 /* ======== NAVBAR ======= */
-
 
 .overlay {
 	height: 100%;
@@ -322,9 +355,10 @@ body {
 
 #login .title {
 	font-size: 2em;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	color: rgb(124, 62, 102);
 	padding-bottom: 15px;
+	align-self: center;
 }
 
 @media only screen and (max-width: 768px) {

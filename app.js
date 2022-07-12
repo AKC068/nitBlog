@@ -1,13 +1,17 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const ejs = require("ejs");
-const mongoose = require("mongoose");
-const Signup = require("./models/signupModel.js");
+const express       = require("express"),
+      app           = express(),
+      bodyParser    = require("body-parser"),
+      mongoose      = require("mongoose"),
+      passport      = require("passport"),
+      LocalStrategy = require("passport-local"),
+      User          = require("./models/userModel.js"),
+      Blog          = require("./models/blogModel.js");
+
+const homeRouter = require("./routes/index.js"),
+      authRouter = require("./routes/auth.js");
 
 const dotenv = require("dotenv");
 dotenv.config();
-
-const app = express();
 
 mongoose.connect(process.env.MONGODB, {
     useNewUrlParser: true,
@@ -17,44 +21,37 @@ mongoose.connect(process.env.MONGODB, {
   .catch((err) => console.log("Error connecting MongoDB: " + err));
 
 app.set("view engine", "ejs");
-
 app.use(bodyParser.urlencoded({ extended: true }));
-
 app.use(express.static("public"));
 
-app.get("/", function (req, res) {
-  res.render("index");
+// ==================================================
+//          PASSPORT CONFIGURATION
+// ==================================================
+
+app.use(
+  require("express-session")({
+    secret: "a blog, for the students and by the students",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+// =================================================
+
+app.use(function(req, res, next) {
+  res.locals.currentUser = req.user;
+  next();
 });
 
-app.get("/login", function (req, res) {
-  res.render("login");
-});
+app.use("/", homeRouter);
+app.use("/", authRouter);
 
-app.get("/signup", function (req, res) {
-  res.render("signup");
-});
-
-app.post("/signup", function (req, res) {
-  const newUser = new Signup({
-    fname: req.body.fname,
-    mname: req.body.mname,
-    lname: req.body.lname,
-    email: req.body.email,
-    password: req.body.password,
-  });
-  newUser.save(function (err) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log(newUser);
-      res.redirect("/");
-    }
-  });
-});
-
-// app.get("/",function(req,res){
-//   res.sendFile(__dirname+"/index.html");
-// });
+// ==============================================
 
 const PORT = 3000;
 app.listen(PORT, function () {

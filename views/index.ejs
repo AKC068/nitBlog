@@ -8,7 +8,7 @@
           <p class="avtar">
             <img src="https://www.w3schools.com/w3images/avatar3.png" class="userpic"alt="userpic"/>
           </p>
-          <h5 class="username">Ayush Kumar Chaudhary</h5>
+          <h5 class="username"><%= currentUser.fname %> <%= currentUser.lname %></h5>
           <hr />
           <p class="userbranch">branch: <span>ECE</span></p>
           <p class="useryear">year: <span>4th</span></p>
@@ -50,13 +50,13 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                   </div>
                   <!-- Modal body with textarea-->
-                  <form>
+                  <form method="POST" action="/">
                     <div class="modal-body">
-                      <input class="form-control" placeholder="Title" required/>
+                      <input class="form-control" placeholder="Title" name="blogtitle" required/>
                       <textarea
                         class="form-control ask"
                         placeholder="What's on your mind... Ask or Share"
-                        rows="10" required
+                        rows="10" name="blogbody" required
                       ></textarea>
                     </div>
                     <!-- Modal footer with submit button-->
@@ -71,34 +71,35 @@
             </div>
           </div>
         </div>
-        <div class="blogpost">
-          <div class="userdetails">
-            <span>
-							<img src="https://www.w3schools.com/w3images/avatar3.png" class="userpic"alt="userpic"/>
-						</span>
-            <span class="username">Ayush Chaudhary</span>
-            <span class="timestamp">1 min ago</span>
+        
+        <% blogs.forEach(function(blog) { %>
+          <div class="blogpost">
+            <div class="userdetails">
+              <span>
+                <img src="https://www.w3schools.com/w3images/avatar3.png" class="userpic"alt="userpic"/>
+              </span>
+              <span class="username"><%= blog.user_name.fname %> <%= blog.user_name.lname %></span>
+              <span class="timestamp">1 min ago</span>
+              <hr />
+            </div>
+            <div class="blogtitle">
+              <h6><%= blog.blogtitle %></h6>
+            </div>
+            <div class="blogbody">
+              <p>
+                <%= blog.blogbody %>
+              </p>
+            </div>
             <hr />
+            <div class="social">
+              <span class="upvote" data-bs-toggle="tooltip" data-bs-placement="top" title="Upvote"><i class="bi bi-arrow-up-circle"></i>50</span>
+              <span class="downvote" data-bs-toggle="tooltip" data-bs-placement="top" title="Downvote"><i class="bi bi-arrow-down-circle"></i>5</span>
+              <span class="comments"><i class="bi bi-chat-text"></i>Comments</span>
+            </div>
           </div>
-          <div class="blogtitle">
-            <h6>Title</h6>
-          </div>
-          <div class="blogbody">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dolore
-              neque ipsum doloremque perspiciatis totam laborum dolorum error
-              architecto, earum magni, cupiditate officia quaerat quo
-              dignissimos, cum similique hic qui?
-            </p>
-          </div>
-          <hr />
-          <div class="social">
-            <span class="upvote" data-bs-toggle="tooltip" data-bs-placement="top" title="Upvote"><i class="bi bi-arrow-up-circle"></i>50</span>
-            <span class="downvote" data-bs-toggle="tooltip" data-bs-placement="top" title="Downvote"><i class="bi bi-arrow-down-circle"></i>5</span>
-            <span class="comments"><i class="bi bi-chat-text"></i>Comments</span>
-          </div>
-        </div>
-        <div class="blogpost">
+        <% }); %>
+
+        <!-- <div class="blogpost">
           <div class="userdetails">
             <span>
 							<img src="https://www.w3schools.com/w3images/avatar3.png" class="userpic"alt="userpic"/>
@@ -178,7 +179,7 @@
             <span class="downvote" data-bs-toggle="tooltip" data-bs-placement="top" title="Downvote"><i class="bi bi-arrow-down-circle"></i>5</span>
             <span class="comments"><i class="bi bi-chat-text"></i>Comments</span>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

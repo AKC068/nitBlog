@@ -80,7 +80,7 @@
             <span href="" class="nav-link imag">
 							<img src="https://www.w3schools.com/w3images/avatar3.png" class="userpic" alt="userpic"/>
 						</span>
-            <span class="nav-link name"> Ayush Kumar Chaudhary </span>
+            <span class="nav-link name"><%= currentUser.fname %> <%= currentUser.lname %></span>
             <a href="" class="nav-link view">
               <button type="button" class="btn viewprofile">
                 view profile
@@ -106,7 +106,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="/logout" class="nav-link">
               <i class="bi bi-box-arrow-right"></i>
               <span>Logout</span>
             </a>
@@ -122,7 +122,7 @@
             <span class="nav-link imag">
 							<img src="https://www.w3schools.com/w3images/avatar3.png" class="userpic" alt="userpic"/>
 						</span>
-            <span class="nav-link name"> Ayush Kumar Chaudhary </span>
+            <span class="nav-link name"><%= currentUser.fname %> <%= currentUser.lname %></span>
             <a href="" class="nav-link view">
               <button type="button" class="btn viewprofile">
                 view profile
@@ -130,7 +130,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="/logout" class="nav-link">
               <i class="bi bi-box-arrow-right"></i>
               <span>Logout</span>
             </a>
