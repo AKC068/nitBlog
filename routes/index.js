@@ -1,6 +1,10 @@
 const express = require("express"),
 			router  = express.Router(),
 			Blog    = require("../models/blogModel");
+			// bodyParser = require("body-parser");
+//
+
+// router.use(bodyParser.urlencoded({extended:true}));
 
 // ==================================================
 //          HOMEPAGE ROUTE
